@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DrupalCamp 2026 - Mastering CSS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@graupl/core@1.0.0-beta.34/dist/css/state/focus.css" integrity="sha256-FSYNDvLG1S1FOX6LpdUAU1ktgYr6G5AJKv1JrUBRY1Q=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@graupl/core@1.0.0-beta.34/dist/css/layout/container.css" integrity="sha256-CNfp9466qo6YbahmyC2q8g9suPs1y42a9l4UEAAJKi8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@graupl/core@1.0.0-beta.34/dist/css/component/navigation.css" integrity="sha256-0U7CFIGKzVeRm5iPOyGxLZhWy9zI3KCmSoTdPpcrtOU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@graupl/core@1.0.0-beta.34/dist/css/component/menu.css" integrity="sha256-v6ykD1o9rsye3/sL5bNW4l8nCTkko+v4n3gwKgy9NKY=" crossorigin="anonymous">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    *:not(dialog) {
+      margin: 0;
+    }
+    body {
+      line-height: 1.5;
+    }
+    img, picture, video, canvas, svg {
+      display: block;
+      max-width: 100%;
+    }
+    input, button, textarea, select {
+      font: inherit;
+    }
+    p, h1, h2, h3, h4, h5, h6 {
+      overflow-wrap: break-word;
+    }
+    p {
+      text-wrap: pretty;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      text-wrap: balance;
+    }
+</style>
+  <style>
+    :root {
+      --graupl-primary: hsl(0, 0%, 50%);
+      --graupl-primary--100: hsl(0, 0%, 90%);
+      --graupl-primary--200: hsl(0, 0%, 80%);
+      --graupl-primary--300: hsl(0, 0%, 70%);
+      --graupl-primary--400: hsl(0, 0%, 60%);
+      --graupl-primary--500: hsl(0, 0%, 50%);
+      --graupl-primary--600: hsl(0, 0%, 40%);
+      --graupl-primary--700: hsl(0, 0%, 30%);
+      --graupl-primary--800: hsl(0, 0%, 20%);
+      --graupl-primary--900: hsl(0, 0%, 10%);
+
+      --graupl-secondary: hsl(220, 35%, 50%);
+      --graupl-secondary--100: hsl(220, 35%, 90%);
+      --graupl-secondary--200: hsl(220, 35%, 80%);
+      --graupl-secondary--300: hsl(220, 35%, 70%);
+      --graupl-secondary--400: hsl(220, 35%, 60%);
+      --graupl-secondary--500: hsl(220, 35%, 50%);
+      --graupl-secondary--600: hsl(220, 35%, 40%);
+      --graupl-secondary--700: hsl(220, 35%, 30%);
+      --graupl-secondary--800: hsl(220, 35%, 20%);
+      --graupl-secondary--900: hsl(220, 35%, 10%);
+
+      --graupl-tertiary: hsl(247, 35%, 50%);
+      --graupl-tertiary--100: hsl(247, 35%, 90%);
+      --graupl-tertiary--200: hsl(247, 35%, 80%);
+      --graupl-tertiary--300: hsl(247, 35%, 70%);
+      --graupl-tertiary--400: hsl(247, 35%, 60%);
+      --graupl-tertiary--500: hsl(247, 35%, 50%);
+      --graupl-tertiary--600: hsl(247, 35%, 40%);
+      --graupl-tertiary--700: hsl(247, 35%, 30%);
+      --graupl-tertiary--800: hsl(247, 35%, 20%);
+      --graupl-tertiary--900: hsl(247, 35%, 10%);
+
+      /* Navigation */
+      --graupl-navigation-background: var(--graupl-primary--900);
+      --graupl-navigation-color: var(--graupl-tertiary--200);
+      --graupl-menu-padding-y: 0.5rem;
+      --graupl-menu-padding-x: 1rem;
+      --graupl-menu-row-gap: 1rem;
+    }
+  </style>
+
+  <style>
+    :root {
+      font-family: system-ui, sans-serif;
+      font-size: 1rem;
+      scroll-snap-type: y proximity;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      padding: 1rem 0 0;
+      background: #fff;
+      position: fixed;
+      left: 0;
+      right: 0;
+    }
+
+    main {
+      padding-top: 6rem;
+    }
+
+    h1, h2 {
+      scroll-margin-top: 6rem;
+      scroll-snap-align: start;
+    }
+
+    section {
+      min-height: 100vh;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navigation">
+      <ul class="menu">
+        <li class="menu-item"><a class="menu-link" href="#page-title">Intro</a></li>
+        <li class="menu-item"><a class="menu-link" href="#custom-props">Custom Props</a></li>
+        <li class="menu-item"><a class="menu-link" href="#anchor-positioning">Anchor Positioning</a></li>
+        <li class="menu-item"><a class="menu-link" href="#container-queries">Container Queries</a></li>
+        <li class="menu-item"><a class="menu-link" href="#get-sassy">Get Sassy?</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section aria-labelledby="page-title" class="container">
+      <h1 id="page-title">DrupalCamp 2026 - Mastering CSS</h1>
+    </section>
+    <section aria-labelledby="custom-props" class="container">
+      <h2 id="custom-props">Custom Properties</h2>
+    </section>
+    <section aria-labelledby="anchor-positioning" class="container">
+      <h2 id="anchor-positioning">Anchor Positioning</h2>
+    </section>
+    <section aria-labelledby="container-queries" class="container">
+      <h2 id="container-queries">Container Queries</h2>
+    </section>
+    <section aria-labelledby="get-sassy" class="container">
+      <h2 id="get-sassy">Get Sassy?</h2>
+    </section>
+  </main>
+  <script type="module">
+    import DisclosureMenu from 'https://cdn.jsdelivr.net/npm/accessible-menu@4.4.0/dist/disclosure-menu.es.js';
+    const nav = document.querySelector('nav');
+    const menuElement = nav.querySelector('ul');
+    const menu = new DisclosureMenu({
+      menuElement
+    });
+  </script>
+</body>
+
+</html>
