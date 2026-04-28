@@ -21,19 +21,9 @@
 </head>
 
 <body>
-  <header>
-    <nav class="navigation">
-      <ul class="menu">
-        <li class="menu-item"><a class="menu-link" href="#page-title">Intro</a></li>
-        <li class="menu-item"><a class="menu-link" href="#featured-content">Featured Content</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section aria-labelledby="page-title" class="container">
-      <h1 id="page-title">DrupalCamp 2026 - Mastering CSS</h1>
-    </section>
-    <section aria-labelledby="featured-content" class="container">
+  <main class="container">
+    <h1>DrupalCamp 2026 - Mastering CSS</h1>
+    <section aria-labelledby="featured-content">
       <h2 id="featured-content">Featured Content</h2>
       <div class="card-group">
         <div class="card featured">
@@ -217,14 +207,6 @@
       </div>
     </section>
   </main>
-  <script type="module">
-    import DisclosureMenu from 'https://cdn.jsdelivr.net/npm/accessible-menu@4.4.0/dist/disclosure-menu.es.js';
-    const nav = document.querySelector('nav');
-    const menuElement = nav.querySelector('ul');
-    const menu = new DisclosureMenu({
-      menuElement
-    });
-  </script>
 </body>
 
 </html>
