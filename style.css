@@ -1,0 +1,161 @@
+:root {
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+}
+
+header {
+  padding: 1rem 0 0;
+  background: hsl(200, 90%, 80%);
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  isolation: isolate;
+}
+
+body {
+  background: hsl(200, 90%, 80%);
+  color: hsl(205, 90%, 15%);
+}
+
+main {
+  padding-top: 6rem;
+}
+
+main a {
+  color: hsl(205, 90%, 15%);
+}
+
+main a:hover {
+  text-decoration-color: hsl(0, 80%, 50%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: hsl(205, 90%, 15%);
+}
+
+.card-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 1rem;
+  flex-wrap: wrap;
+  height: max-content;
+}
+
+.card {
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  position: relative;
+  background: hsl(205, 90%, 15%);
+  color: hsl(200, 90%, 80%);
+  overflow: hidden;
+  transition: transform 200ms ease-in-out;
+  isolation: isolate;
+  anchor-scope: --card;
+}
+
+.card:hover {
+  transform: scale(1.0125);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  anchor-name: --card-content;
+}
+
+.card-header .card-title a {
+  color: #fff;
+}
+
+.card-header .card-title a::after {
+  display: block;
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.card-image {
+  aspect-ratio: 3 / 2;
+  --anchor-name: --card-image;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-footer {
+  padding: 1rem;
+  anchor-name: --card-footer;
+  display: flex;
+  position: absolute;
+  align-items: flex-end;
+  justify-content: flex-end;
+  top: 0;
+  left: 0;
+  right: 0;
+  aspect-ratio: 3 / 2;
+}
+
+.card-footer ul {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.card-footer ul li {
+  border-radius: calc(0.75rem / 2);
+  background: hsl(0, 80%, 50%);
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.card.featured {
+  grid-column: span 2;
+  display: flex;
+
+  .card-image {
+    aspect-ratio: 3 / 4;
+    flex-shrink: 1;
+  }
+
+  .card-footer {
+    aspect-ratio: 3 / 4;
+    top: 0;
+    bottom: 0;
+    right: auto;
+    left: 0;
+  }
+
+  .card-content {
+    flex-grow: 1;
+  }
+}
+
+@media screen and (width < 1000px) {
+  .card-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (width < 630px) {
+  .card-group {
+    grid-template-columns: 1fr;
+  }
+}

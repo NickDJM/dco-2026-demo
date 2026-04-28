@@ -5,110 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DrupalCamp 2026 - Mastering CSS</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@graupl/core@1.0.0-beta.34/dist/css/state/focus.css" integrity="sha256-FSYNDvLG1S1FOX6LpdUAU1ktgYr6G5AJKv1JrUBRY1Q=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@graupl/core@1.0.0-beta.34/dist/css/layout/container.css" integrity="sha256-CNfp9466qo6YbahmyC2q8g9suPs1y42a9l4UEAAJKi8=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@graupl/core@1.0.0-beta.34/dist/css/component/navigation.css" integrity="sha256-0U7CFIGKzVeRm5iPOyGxLZhWy9zI3KCmSoTdPpcrtOU=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@graupl/core@1.0.0-beta.34/dist/css/component/menu.css" integrity="sha256-v6ykD1o9rsye3/sL5bNW4l8nCTkko+v4n3gwKgy9NKY=" crossorigin="anonymous">
-  <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-    *:not(dialog) {
-      margin: 0;
-    }
-    body {
-      line-height: 1.5;
-    }
-    img, picture, video, canvas, svg {
-      display: block;
-      max-width: 100%;
-    }
-    input, button, textarea, select {
-      font: inherit;
-    }
-    p, h1, h2, h3, h4, h5, h6 {
-      overflow-wrap: break-word;
-    }
-    p {
-      text-wrap: pretty;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      text-wrap: balance;
-    }
-</style>
-  <style>
-    :root {
-      --graupl-primary: hsl(0, 0%, 50%);
-      --graupl-primary--100: hsl(0, 0%, 90%);
-      --graupl-primary--200: hsl(0, 0%, 80%);
-      --graupl-primary--300: hsl(0, 0%, 70%);
-      --graupl-primary--400: hsl(0, 0%, 60%);
-      --graupl-primary--500: hsl(0, 0%, 50%);
-      --graupl-primary--600: hsl(0, 0%, 40%);
-      --graupl-primary--700: hsl(0, 0%, 30%);
-      --graupl-primary--800: hsl(0, 0%, 20%);
-      --graupl-primary--900: hsl(0, 0%, 10%);
-
-      --graupl-secondary: hsl(220, 35%, 50%);
-      --graupl-secondary--100: hsl(220, 35%, 90%);
-      --graupl-secondary--200: hsl(220, 35%, 80%);
-      --graupl-secondary--300: hsl(220, 35%, 70%);
-      --graupl-secondary--400: hsl(220, 35%, 60%);
-      --graupl-secondary--500: hsl(220, 35%, 50%);
-      --graupl-secondary--600: hsl(220, 35%, 40%);
-      --graupl-secondary--700: hsl(220, 35%, 30%);
-      --graupl-secondary--800: hsl(220, 35%, 20%);
-      --graupl-secondary--900: hsl(220, 35%, 10%);
-
-      --graupl-tertiary: hsl(247, 35%, 50%);
-      --graupl-tertiary--100: hsl(247, 35%, 90%);
-      --graupl-tertiary--200: hsl(247, 35%, 80%);
-      --graupl-tertiary--300: hsl(247, 35%, 70%);
-      --graupl-tertiary--400: hsl(247, 35%, 60%);
-      --graupl-tertiary--500: hsl(247, 35%, 50%);
-      --graupl-tertiary--600: hsl(247, 35%, 40%);
-      --graupl-tertiary--700: hsl(247, 35%, 30%);
-      --graupl-tertiary--800: hsl(247, 35%, 20%);
-      --graupl-tertiary--900: hsl(247, 35%, 10%);
-
-      /* Navigation */
-      --graupl-navigation-background: var(--graupl-primary--900);
-      --graupl-navigation-color: var(--graupl-tertiary--200);
-      --graupl-menu-padding-y: 0.5rem;
-      --graupl-menu-padding-x: 1rem;
-      --graupl-menu-row-gap: 1rem;
-    }
-  </style>
-
-  <style>
-    :root {
-      font-family: system-ui, sans-serif;
-      font-size: 1rem;
-      scroll-snap-type: y proximity;
-      scroll-behavior: smooth;
-    }
-
-    header {
-      padding: 1rem 0 0;
-      background: #fff;
-      position: fixed;
-      left: 0;
-      right: 0;
-    }
-
-    main {
-      padding-top: 6rem;
-    }
-
-    h1, h2 {
-      scroll-margin-top: 6rem;
-      scroll-snap-align: start;
-    }
-
-    section {
-      min-height: 100vh;
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@graupl/core@1.0.0-beta.34/dist/css/theme.css"
+    integrity="sha256-K0cvEf/pX8RGTvVEFVJ4oiSklu5UEEq93Da2kqxIiek=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@graupl/core@1.0.0-beta.34/dist/css/state/focus.css"
+    integrity="sha256-FSYNDvLG1S1FOX6LpdUAU1ktgYr6G5AJKv1JrUBRY1Q=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@graupl/core@1.0.0-beta.34/dist/css/layout/container.css"
+    integrity="sha256-CNfp9466qo6YbahmyC2q8g9suPs1y42a9l4UEAAJKi8=" crossorigin="anonymous">
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@graupl/core@1.0.0-beta.34/dist/css/component/navigation.css"
+    integrity="sha256-0U7CFIGKzVeRm5iPOyGxLZhWy9zI3KCmSoTdPpcrtOU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@graupl/core@1.0.0-beta.34/dist/css/component/menu.css"
+    integrity="sha256-v6ykD1o9rsye3/sL5bNW4l8nCTkko+v4n3gwKgy9NKY=" crossorigin="anonymous">
+  <link rel="stylesheet" href="./primer.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -116,10 +25,7 @@
     <nav class="navigation">
       <ul class="menu">
         <li class="menu-item"><a class="menu-link" href="#page-title">Intro</a></li>
-        <li class="menu-item"><a class="menu-link" href="#custom-props">Custom Props</a></li>
-        <li class="menu-item"><a class="menu-link" href="#anchor-positioning">Anchor Positioning</a></li>
-        <li class="menu-item"><a class="menu-link" href="#container-queries">Container Queries</a></li>
-        <li class="menu-item"><a class="menu-link" href="#get-sassy">Get Sassy?</a></li>
+        <li class="menu-item"><a class="menu-link" href="#featured-content">Featured Content</a></li>
       </ul>
     </nav>
   </header>
@@ -127,17 +33,188 @@
     <section aria-labelledby="page-title" class="container">
       <h1 id="page-title">DrupalCamp 2026 - Mastering CSS</h1>
     </section>
-    <section aria-labelledby="custom-props" class="container">
-      <h2 id="custom-props">Custom Properties</h2>
-    </section>
-    <section aria-labelledby="anchor-positioning" class="container">
-      <h2 id="anchor-positioning">Anchor Positioning</h2>
-    </section>
-    <section aria-labelledby="container-queries" class="container">
-      <h2 id="container-queries">Container Queries</h2>
-    </section>
-    <section aria-labelledby="get-sassy" class="container">
-      <h2 id="get-sassy">Get Sassy?</h2>
+    <section aria-labelledby="featured-content" class="container">
+      <h2 id="featured-content">Featured Content</h2>
+      <div class="card-group">
+        <div class="card featured">
+          <div class="card-image">
+            <img src="https://placehold.co/600x400" alt="Placeholder image for CSS Grid Layout">
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <h3 class="card-title">
+                <a href="#">CSS Grid Layout</a>
+              </h3>
+            </div>
+            <div class="card-body">
+              <p>Learn how to create complex and responsive layouts with CSS Grid, a powerful two-dimensional layout
+                system.</p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <ul>
+              <li>CSS</li>
+              <li>Grid</li>
+              <li>Layout</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <img src="https://placehold.co/600x400" alt="Placeholder image for CSS Flexbox">
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <h3 class="card-title">
+                <a href="#">CSS Flexbox</a>
+              </h3>
+            </div>
+            <div class="card-body">
+              <p>Master the art of creating flexible and responsive layouts with CSS Flexbox, a one-dimensional layout
+                system.</p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <ul>
+              <li>CSS</li>
+              <li>Flexbox</li>
+              <li>Layout</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <img src="https://placehold.co/600x400" alt="Placeholder image for CSS Variables">
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <h3 class="card-title">
+                <a href="#">CSS Variables</a>
+              </h3>
+            </div>
+            <div class="card-body">
+              <p>Learn how to use CSS variables to create dynamic and maintainable stylesheets.</p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <ul>
+              <li>CSS</li>
+              <li>Variables</li>
+              <li>Styling</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <img src="https://placehold.co/600x400" alt="Placeholder image for CSS Cascade Layers">
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <h3 class="card-title">
+                <a href="#">CSS Cascade Layers</a>
+              </h3>
+            </div>
+            <div class="card-body">
+              <p>Explore how cascade layers help organize style priority and make large stylesheets easier to manage.</p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <ul>
+              <li>CSS</li>
+              <li>Cascade</li>
+              <li>Layers</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <img src="https://placehold.co/600x400" alt="Placeholder image for Container Queries">
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <h3 class="card-title">
+                <a href="#">Container Queries</a>
+              </h3>
+            </div>
+            <div class="card-body">
+              <p>Build components that adapt to their own available space instead of relying only on viewport size.</p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <ul>
+              <li>CSS</li>
+              <li>Queries</li>
+              <li>Responsive</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <img src="https://placehold.co/600x400" alt="Placeholder image for Anchor Positioning">
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <h3 class="card-title">
+                <a href="#">Anchor Positioning</a>
+              </h3>
+            </div>
+            <div class="card-body">
+              <p>Discover how anchor positioning can place popovers, labels, and overlays relative to other elements.</p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <ul>
+              <li>CSS</li>
+              <li>Anchors</li>
+              <li>Positioning</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <img src="https://placehold.co/600x400" alt="Placeholder image for CSS Nesting">
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <h3 class="card-title">
+                <a href="#">CSS Nesting</a>
+              </h3>
+            </div>
+            <div class="card-body">
+              <p>Use native CSS nesting to group related selectors and keep component styles concise and readable.</p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <ul>
+              <li>CSS</li>
+              <li>Nesting</li>
+              <li>Selectors</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <img src="https://placehold.co/600x400" alt="Placeholder image for Scroll Snap">
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <h3 class="card-title">
+                <a href="#">Scroll Snap</a>
+              </h3>
+            </div>
+            <div class="card-body">
+              <p>Create smooth, guided scrolling experiences for carousels, galleries, and full-page sections.</p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <ul>
+              <li>CSS</li>
+              <li>Scroll</li>
+              <li>Interaction</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
   <script type="module">
