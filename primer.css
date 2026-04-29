@@ -1,46 +1,8 @@
 :root {
-  --graupl-white: #fff;
-  --graupl-black: #000;
   --graupl-primary: hsl(205, 90%, 15%);
-  --graupl-primary--100: color-mix(in srgb, var(--graupl-primary) 20%, var(--graupl-white));
-  --graupl-primary--200: color-mix(in srgb, var(--graupl-primary) 40%, var(--graupl-white));
-  --graupl-primary--300: color-mix(in srgb, var(--graupl-primary) 60%, var(--graupl-white));
-  --graupl-primary--400: color-mix(in srgb, var(--graupl-primary) 80%, var(--graupl-white));
-  --graupl-primary--500: var(--graupl-primary);
-  --graupl-primary--600: color-mix(in srgb, var(--graupl-primary) 80%, var(--graupl-black));
-  --graupl-primary--700: color-mix(in srgb, var(--graupl-primary) 60%, var(--graupl-black));
-  --graupl-primary--800: color-mix(in srgb, var(--graupl-primary) 40%, var(--graupl-black));
-  --graupl-primary--900: color-mix(in srgb, var(--graupl-primary) 80%, var(--graupl-black));
-
   --graupl-secondary: hsl(200, 90%, 80%);
-  --graupl-secondary--100: color-mix(in srgb, var(--graupl-secondary) 20%, var(--graupl-white));
-  --graupl-secondary--200: color-mix(in srgb, var(--graupl-secondary) 40%, var(--graupl-white));
-  --graupl-secondary--300: color-mix(in srgb, var(--graupl-secondary) 60%, var(--graupl-white));
-  --graupl-secondary--400: color-mix(in srgb, var(--graupl-secondary) 80%, var(--graupl-white));
-  --graupl-secondary--500: var(--graupl-secondary);
-  --graupl-secondary--600: color-mix(in srgb, var(--graupl-secondary) 80%, var(--graupl-black));
-  --graupl-secondary--700: color-mix(in srgb, var(--graupl-secondary) 60%, var(--graupl-black));
-  --graupl-secondary--800: color-mix(in srgb, var(--graupl-secondary) 40%, var(--graupl-black));
-  --graupl-secondary--900: color-mix(in srgb, var(--graupl-secondary) 20%, var(--graupl-black));
-
   --graupl-tertiary: hsl(0, 80%, 50%);
-  --graupl-tertiary--100: color-mix(in srgb, var(--graupl-tertiary) 20%, var(--graupl-white));
-  --graupl-tertiary--200: color-mix(in srgb, var(--graupl-tertiary) 40%, var(--graupl-white));
-  --graupl-tertiary--300: color-mix(in srgb, var(--graupl-tertiary) 60%, var(--graupl-white));
-  --graupl-tertiary--400: color-mix(in srgb, var(--graupl-tertiary) 80%, var(--graupl-tertiary));
-  --graupl-tertiary--500: var(--graupl-tertiary);
-  --graupl-tertiary--600: color-mix(in srgb, var(--graupl-tertiary) 80%, var(--graupl-black));
-  --graupl-tertiary--700: color-mix(in srgb, var(--graupl-tertiary) 60%, var(--graupl-black));
-  --graupl-tertiary--800: color-mix(in srgb, var(--graupl-tertiary) 40%, var(--graupl-black));
-  --graupl-tertiary--900: color-mix(in srgb, var(--graupl-tertiary) 20%, var(--graupl-black));
-
-  /* Navigation */
-  --graupl-navigation-background: var(--graupl-theme-active--primary--500);
-  --graupl-navigation-color: var(--graupl-theme-active--secondary--500);
-  --graupl-menu-padding-y: 0.5rem;
-  --graupl-menu-padding-x: 1rem;
-  --graupl-menu-row-gap: 1rem;
-  --graupl-color: null;
+  --graupl-content-max-width: 120ch;
 }
 
 *,
