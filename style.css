@@ -93,17 +93,28 @@ a:hover {
 }
 
 .card-image {
-  aspect-ratio: 3 / 2;
+  position: relative;
+}
+
+.card-image::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 0;
+  padding-top: calc(100% / 3 * 2);
 }
 
 .card-image img {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   object-fit: cover;
 }
 
 .card-footer {
-  padding: 1rem;
+  padding: calc((100% / 3 * 2) - 2.25rem) 1rem 1rem;
   display: flex;
   position: absolute;
   place-items: flex-end;
@@ -113,7 +124,6 @@ a:hover {
   right: 0;
   bottom: auto;
   left: 0;
-  aspect-ratio: 3 / 2;
 }
 
 .card-footer ul {
@@ -141,13 +151,22 @@ a:hover {
   }
 
   .card.horizontal .card-image {
-    aspect-ratio: 3 / 4;
+    height: 100%;
+    width: 100%;
+  }
+
+  .card.horizontal .card-image::after {
+    display: none;
+  }
+
+  .card.horizontal .card-image img {
+    height: 100%;
   }
 
   .card.horizontal .card-footer {
-    aspect-ratio: 3 / 4;
+    padding: 1rem;
     top: 0;
-    right: auto;
+    right: 50%;
     bottom: 0;
     left: 0;
   }
