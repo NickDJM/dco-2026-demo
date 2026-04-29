@@ -10,14 +10,6 @@ body {
   padding-block: 5rem;
 }
 
-a {
-  color: hsl(205, 90%, 15%);
-}
-
-a:hover {
-  text-decoration-color: hsl(0, 80%, 50%);
-}
-
 /* Typography */
 /* Font size is base in minor third scale. */
 h1 {
@@ -48,6 +40,16 @@ small {
   font-size: 0.833rem;
 }
 
+/* Links */
+a {
+  color: hsl(205, 90%, 15%);
+}
+
+a:hover {
+  text-decoration-color: hsl(0, 80%, 50%);
+}
+
+/* Card group styles */
 .card-group {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -55,6 +57,7 @@ small {
   gap: 1rem;
 }
 
+/* Card styles */
 .card {
   border-radius: 0.75rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
@@ -130,6 +133,7 @@ small {
   font-weight: bold;
 }
 
+/* Horizontal card styles. */
 @media screen and (width > 630px) {
   .card.horizontal {
     grid-column: span 2;
@@ -149,6 +153,7 @@ small {
   }
 }
 
+/* Responsive card group layouts */
 @media screen and (width <= 1000px) {
   .card-group {
     grid-template-columns: repeat(2, 1fr);
