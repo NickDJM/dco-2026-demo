@@ -49,10 +49,10 @@ small {
 /* Links */
 a {
   color: var(--link-color);
-}
 
-a:hover {
-  text-decoration-color: var(--link-hover-text-decoration-color, var(--red));
+  &:hover {
+    text-decoration-color: var(--link-hover-text-decoration-color, var(--red));
+  }
 }
 
 /* Card group styles */
@@ -75,11 +75,12 @@ a:hover {
   overflow: hidden;
   transition: transform 200ms ease-in-out;
   isolation: isolate;
+
+  &:hover {
+    transform: scale(1.0125);
+  }
 }
 
-.card:hover {
-  transform: scale(1.0125);
-}
 
 .card-content {
   display: flex;
@@ -98,23 +99,23 @@ a:hover {
 
 .card-image {
   position: relative;
-}
 
-.card-image::after {
-  display: block;
-  content: "";
-  width: 100%;
-  height: 0;
-  padding-top: calc(100% / 3 * 2);
-}
+  &::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 0;
+    padding-top: calc(100% / 3 * 2);
+  }
 
-.card-image img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  object-fit: cover;
+  img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    object-fit: cover;
+  }
 }
 
 .card-footer {
@@ -128,23 +129,23 @@ a:hover {
   right: 0;
   bottom: auto;
   left: 0;
-}
 
-.card-footer ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 0;
-}
+  ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0;
 
-.card-footer ul li {
-  border-radius: calc(var(--card-border-radius, 0.75rem) / 2);
-  background: var(--card-tag-background, var(--red));
-  color: var(--card-tag-color, var(--white));
-  padding: 0.25rem 0.5rem;
-  line-height: 1;
-  font-weight: bold;
+    li {
+      border-radius: calc(var(--card-border-radius, 0.75rem) / 2);
+      background: var(--card-tag-background, var(--red));
+      color: var(--card-tag-color, var(--white));
+      padding: 0.25rem 0.5rem;
+      line-height: 1;
+      font-weight: bold;
+    }
+  }
 }
 
 /* Horizontal card styles. */
@@ -152,23 +153,23 @@ a:hover {
   .card.horizontal {
     grid-column: span 2;
     display: flex;
-  }
 
-  .card.horizontal .card-image {
-    height: 100%;
-    width: 100%;
-  }
+    .card-image {
+      height: 100%;
+      width: 100%;
 
-  .card.horizontal .card-image img {
-    height: 100%;
-  }
+      img {
+        height: 100%;
+      }
+    }
 
-  .card.horizontal .card-footer {
-    padding: 1rem;
-    top: 0;
-    right: auto;
-    bottom: 0;
-    left: 0;
+    .card-footer {
+      padding: 1rem;
+      top: 0;
+      right: auto;
+      bottom: 0;
+      left: 0;
+    }
   }
 }
 
