@@ -86,6 +86,7 @@ a {
   overflow: hidden;
   transition: transform 200ms ease-in-out;
   isolation: isolate;
+  anchor-name: --card;
 
   &:hover {
     transform: scale(1.0125);
@@ -102,10 +103,6 @@ a {
 
     .card-footer {
       padding: 1rem;
-      top: 0;
-      right: auto;
-      bottom: 0;
-      left: 0;
     }
   }
 }
@@ -115,6 +112,7 @@ a {
   flex-direction: column;
   gap: 0.5rem;
   padding: 1rem;
+  anchor-name: --card-content;
 }
 
 .card-title a::after {
@@ -127,6 +125,7 @@ a {
 
 .card-image {
   aspect-ratio: 3 / 2;
+  anchor-name: --card-image;
 
   img {
     width: 100%;
@@ -142,10 +141,10 @@ a {
   place-items: flex-end;
   align-items: flex-end;
   justify-content: flex-end;
-  top: 0;
-  right: 0;
-  bottom: auto;
-  left: 0;
+  anchor-name: --card-footer;
+  right: anchor(--card-image right);
+  bottom: anchor(--card-image bottom);
+  left: anchor(--card-image left);
 
   ul {
     list-style: none;
