@@ -58,7 +58,7 @@ a {
 /* Card group styles */
 .card-group {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
   grid-auto-rows: auto;
   gap: 1rem;
 }
@@ -170,18 +170,5 @@ a {
       bottom: 0;
       left: 0;
     }
-  }
-}
-
-/* Responsive card group layouts */
-@media screen and (width <= 1000px) {
-  .card-group {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (width <= 630px) {
-  .card-group {
-    grid-template-columns: 1fr;
   }
 }
