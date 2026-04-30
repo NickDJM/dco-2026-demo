@@ -87,6 +87,9 @@ a {
   transition: transform 200ms ease-in-out;
   isolation: isolate;
   anchor-name: --card;
+  display: grid;
+  grid-template-columns: [image-start content-start] 100% [content-end image-end];
+  grid-template-rows: [image-start] auto [image-end content-start] auto [content-end];
 
   &:hover {
     transform: scale(1.0125);
@@ -94,11 +97,11 @@ a {
 
   /* Horizontal card styles. */
   @container (width >= 575px) {
-    display: flex;
+    grid-template-columns: [image-start] 1fr [image-end content-start] 1fr [content-end];
+    grid-template-rows: [image-start content-start] auto [content-end image-end];
 
     .card-image {
       aspect-ratio: 1 / 1;
-      max-width: 40%;
     }
 
     .card-footer {
@@ -108,6 +111,7 @@ a {
 }
 
 .card-content {
+  grid-area: content;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -124,6 +128,7 @@ a {
 }
 
 .card-image {
+  grid-area: image;
   aspect-ratio: 3 / 2;
   anchor-name: --card-image;
 
@@ -131,6 +136,7 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
   }
 }
 
